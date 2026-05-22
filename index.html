@@ -310,6 +310,21 @@
           currentIndex = i;
           updateCoverflow();
         });
+		card.addEventListener("dblclick", () => {
+
+  // FOTO SECRET
+  if(currentPhase === 3 && i === 4){
+
+    document.body.style.transition = "0.8s ease";
+    document.body.style.opacity = "0";
+
+    setTimeout(() => {
+      window.location.href = "secret.html";
+    }, 800);
+
+  }
+
+});
 
         coverflow.appendChild(card);
       });
